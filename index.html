@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | E-commerce product page</title>
+
+  <link rel="stylesheet" href="./estilos.css">
+
+</head>
+<body>
+
+<section id="body">
+<!-- ------------------------CABEÇALHO------------------ -->
+<!-- <header> -->
+  <div id="menushadow">
+    <div id="thesidemenu">
+      <img src="./images/icon-close.svg" alt="close" id="closemenu" onclick="closesidemenu()">
+
+      <ul id="sidelist">
+        <li class="sideitens">Collections</li>
+        <li class="sideitens">Men</li>
+        <li class="sideitens">Women</li>
+        <li class="sideitens">About</li>
+        <li class="sideitens">Contact</li>
+      </ul>
+
+    </div>
+  </div>
+
+  <section id="header">
+    <img src="./images/icon-menu.svg" alt="menu" id="sidemenu" onclick="showsidemenu()">
+
+  <!-- LOGO  -->
+<div id="logo"><img src="./images/logo.svg" width="175px"></div>
+
+<!-- OPÇOES -->
+  <section id="opcoes">
+    <a>Collections</a>
+    <a>Men</a>
+    <a>Women</a>
+    <a>About</a>
+    <a>Contact</a>
+  </section>
+
+  <!-- CARRINHO -->
+  <section id="conta">
+
+    <div id="carrinhoimg" onclick="carrinho()">
+      <img src="./images/icon-cart.svg" width="25px">
+      <div id="notfication">a</div>
+    </div>
+
+      <!--  ABA CARRINHO -->
+      <div id="carrinho"> 
+        <div id="cart">
+          Cart
+        </div>
+        <div id="prods">
+          <p id="empty">Your cart is empty.</p>
+
+          <div id="produtos">
+
+            <div id="infoprod">
+              <img src="./images/image-product-1-thumbnail.jpg" alt="produto" id="thumb">
+
+              <div>
+                <p>Fall Limited Edition Sneakers</p>
+                <p id="valor"></p>
+              </div>
+
+              <img src="./images/icon-delete.svg" alt="deletar" id="delet" onclick="deletar()">
+            </div>
+
+            <button id="check">
+              <div>Checkout</div>
+            </button>
+
+          </div>
+
+        </div>
+      </div>
+
+      
+    <div id="avatar">
+      <img src="./images/image-avatar.png">
+    </div>
+
+  </section>
+
+</section>
+<!-- </header> -->
+
+
+<!-- ------------------------CONTEUDO------------------ -->
+<section id="content">
+
+  <section id="table">
+
+    <section id="imagens">
+      <div id="foco">
+
+        <div class="psetas left" onclick="psetas(0)">
+          <img src="./images/icon-previous.svg" alt="previous">
+        </div>
+
+        <img src="./images/image-product-1.jpg" alt="tênis"     id="principalimg" onclick="show()">
+
+        <div class="psetas right" onclick="psetas(1)">
+          <img src="./images/icon-next.svg" alt="next">
+        </div>
+
+      </div>
+      <div id="fotos">
+
+        <img src="./images/image-product-1-thumbnail.jpg"  onclick="changefoto(0)">
+
+        <img src="./images/image-product-2-thumbnail.jpg"  onclick="changefoto(1)">
+
+        <img src="./images/image-product-3-thumbnail.jpg" onclick="changefoto(2)">
+
+        <img src="./images/image-product-4-thumbnail.jpg"  onclick="changefoto(3)">
+
+      </div>
+ 
+      <div id="shadow">
+
+        <div id="prenex">
+
+          <div id="close" onclick="closesha()">
+            <img src="./images/icon-close.svg" alt="close" width="30px" height="30px">
+          </div>
+
+          <div class="setas" onclick="setas(0)">
+            <img src="./images/icon-previous.svg" alt="previous">
+          </div>
+
+          <img src="./images/image-product-1.jpg" alt="tênis" id="principalimgsha">
+
+          <div class="setas" onclick="setas(1)">
+            <img src="./images/icon-next.svg" alt="next">
+          </div>
+
+        </div>
+
+        <div id="fotossha">
+
+
+          <img src="./images/image-product-1-thumbnail.jpg"  onclick="changefotosha(0)">
+
+          <img src="./images/image-product-2-thumbnail.jpg"  onclick="changefotosha(1)">
+
+          <img src="./images/image-product-3-thumbnail.jpg" onclick="changefotosha(2)">
+
+          <img src="./images/image-product-4-thumbnail.jpg"  onclick="changefotosha(3)">
+  
+        </div>
+      </div>
+
+
+    </section>
+
+
+    <section id="infos">
+      <h3>SNEAKER COMPANY</h3>
+      <h1>Fall Limited Edition Sneakers</h1>
+
+      <p>These low-profile sneakers are your perfect casual wear companion. Featuring a 
+        durable rubber outer sole, theyll withstand everything the weather can offer.</p>
+
+        <div id="price">
+          <h2>$125.00 <div id="discount">50%</div></h2>
+          <h4><s>$250.00</s></h4>
+        </div>
+        
+
+
+        <div id="addcart">
+
+          <div id="quant">
+            <img src="./images/icon-minus.svg" alt="-" onclick="menos()">
+            <p id="quantidade">1</p>
+            <img src="./images/icon-plus.svg" alt="+" onclick="mais()">
+          </div>
+
+          <button id="add" onclick="add()">
+            <img src="./images/icon-cart.svg" alt="cart">
+            Add to cart
+          </button>
+
+        </div>
+    </section>
+
+  </section>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.linkedin.com/in/ailton-gracindo-05849821a/" target="_blank">Ailton G</a>
+  </div>
+
+</section>
+
+</section><!--  body -->
+
+<script src="main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,573 @@
+@font-face {
+    font-family: 'Kumbh Sans' ;
+    src: url('./font/KumbhSans-VariableFont_YOPQ\,wght.ttf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans';
+}
+#body{
+    display: flex;
+    flex-direction: column;
+    /* background-color: bisque; */
+    width: 100vw;
+    height: 100vh;
+
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+/* -------------------HEADER------------------- */
+header{
+    /* background-color: aquamarine; */
+
+    top: 0;
+    width: 100%;
+    height: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#header{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    position: relative;
+
+    width: 80%;
+    height: 100px;
+
+    display: flex;
+    align-items: center;
+}
+/*  menu LOGO -----------------------*/
+#sidemenu{
+    display: none;
+}
+#menushadow{
+    display: none;
+    position: fixed;
+    top:0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 3;
+}
+#thesidemenu{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    padding: 30px;
+
+    height: 100%;
+    width: 60%;
+    background-color: white;
+}
+#closemenu{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+#sidelist{
+    margin-top: 50px;
+    list-style: none;
+    line-height: 50px;
+}
+.sideitens{
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#logo{
+    margin-left: 10px;
+    margin-right: 50px;
+    cursor: pointer;
+}
+
+/* OPCOES ----------------------- */
+#opcoes{
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 350px;
+    width: 450px;
+    height: 100%;
+    margin: 3px;
+}
+
+#opcoes > a{
+    height: 100%;
+
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    font-size: 16px;
+}
+#opcoes a:hover{
+    box-shadow: inset 0px -5px 0px -1px rgb(255, 125, 26);
+}
+/* CARRINHO -----------------------*/
+#conta{    
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    position: absolute;
+    right: 10px;
+}
+#carrinhoimg img{
+    cursor: pointer;
+    position: relative;
+}
+#notfication{
+    display: none;
+    background-color: rgb(255, 125, 26);
+    position: absolute;
+    justify-content: center;
+    align-items:center;
+
+    color: white;
+    font-weight: 600;
+    font-size: 12px;
+
+    padding: 3px;
+     width: 20px;
+    height: 10px;
+    border-radius: 10px;
+
+    top: 13px;
+    left: 17px;
+}
+/* --------------- ABA CARRINHO -----------------------*/
+#carrinho{
+    display: none;
+    flex-direction: column;
+
+    width: 400px;
+    height: 250px;
+
+    position: absolute;
+    left: -200px;
+    top: 60px;
+
+    background-color: white;
+    box-shadow: 0px 0px 37px -10px rgba(0,0,0,0.5);
+    border-radius: 10px;
+    z-index: 3;
+    /* border: 1px solid red; */
+}
+#cart{
+    width: 100%;
+    height: 100px;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    
+    font-size: 22px;
+    font-weight: 700;
+}
+#prods{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+#empty{
+    display: flex;
+}
+#produtos{
+    width: 100%;
+    height: 100%;
+
+    display: none;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+#infoprod{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    width: 100%;
+}
+#thumb{
+    width: 75px;
+    height: 75px;
+
+    margin: 10px;
+    border-radius: 10px;
+}
+#delet{
+    max-width: 20px;
+    max-height: 20px;
+    cursor: pointer;
+}
+#check{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 125, 26);
+
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+
+    margin: 10px;
+
+    width: 80%;
+    height: 50px;
+    cursor: pointer;
+}
+
+
+/*AVATAR*/
+#avatar{
+    border-radius: 100%;
+    display: flex;
+    cursor: pointer;
+}
+#avatar img{
+    max-width: 60px;
+    padding: 3px;
+}
+#avatar:hover{
+    background-color: rgb(255, 125, 26);
+}
+/* --------------------------CONTEUDO------------------------------- */
+#content{
+    width: 100%;
+    height: 100%; 
+    border-radius: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#table{
+    width: 70%;
+
+    display: flex;
+}
+/* -----------IMAGENS--------------- */
+#imagens{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin-left: 40px;
+    margin-right: 40px;
+}
+#foco{
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+.psetas{
+    min-width: 45px;
+    height: 45px;
+    background-color: rgb(255, 255, 255);
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 100%;
+
+    z-index: 2;
+    cursor: pointer;
+}
+.left{
+    margin-right: -55px;
+    margin-left: 10px;
+}
+.right{
+    margin-left: -55px;
+    margin-right: 10px;
+}
+#principalimg{
+    max-width: 350px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    /* cursor: pointer; */
+}
+#fotos{
+ display: flex;
+ justify-content: space-between;
+}
+#fotos img{
+    max-width: 65px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#fotos img:hover{
+    outline:rgb(255, 125, 26) solid 3px;
+}
+/* -----------IMAGENS SHADOW--------------- */
+#shadow{
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+
+    background-color: rgba(0, 0, 0, 0.8);
+
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+#prenex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-wrap: wrap;
+}
+#close{
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    cursor: pointer;
+}
+#close:hover{
+    filter: drop-shadow(0px 0px 20px rgb(255, 125, 26));
+}
+#principalimgsha{
+    max-width: 500px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+.setas{
+    width: 50px;
+    height: 50px;
+    background-color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 100%;
+
+    margin: -10px;
+    z-index: 2;
+    cursor: pointer;
+}
+#fotossha{
+    display: flex;
+    justify-content: space-between;
+}
+#fotossha img{
+    max-width: 100px;
+    border-radius: 20px;
+    margin: 20px;
+    cursor: pointer;
+}
+/* -----------INFOS--------------- */
+#infos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+
+    flex-wrap: wrap;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding: 20px;
+    gap: 20px;
+
+}
+h3{
+    color: rgb(255, 125, 26);
+}
+h1{
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+p{
+    font-size: 16px;
+    color: gray;
+    line-height: 25px;
+
+}
+#price{
+    display: block;
+}
+h2{
+    font-size: 28px;
+    display: flex;
+}
+#discount{
+    font-size: 14px;
+    color: hsl(26, 100%, 55%);
+    background-color:hsl(25, 100%, 94%) ;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 10px;
+
+}
+h4{
+    color: hsl(219, 9%, 45%);
+
+}
+#addcart{
+    display: flex;
+    justify-content: space-around;
+
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 60px;
+    gap: 10px;
+
+}
+#quant{
+    background-color: hsl(240, 21%, 93%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-radius: 10px;
+    width: 40%;
+    height: 50px;
+}
+#quant img{
+    padding: 15px;
+    cursor: pointer;
+}
+#quant p{
+    font-weight: 900;
+    font-size: 18px;
+    color: black;
+}
+#add{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    color: white;
+    background-color: rgb(255, 125, 26);
+
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+
+    line-height: 15px;
+    width: 60%;
+    height: 50px;
+    cursor: pointer;
+}
+#add img{
+    max-width: 17px;
+    max-height: 17px;
+}
+#add:hover{
+    background-color: rgba(255, 125, 26, 0.6);
+}
+
+
+.attribution{
+    position: absolute;
+    bottom: 0;
+    font-size: 12px;
+}
+
+@media(max-width:460px){
+/*------------------------escopo------------------------*/
+    #body{
+        width: 100%;
+        height: 100%;
+    }
+/*------------------------header------------------------*/
+    #header{
+        width: 100%;
+        background-color: white;
+    }
+    #sidemenu{
+        display: flex;
+        margin: 20px;
+        cursor: pointer;
+    }
+    #opcoes{
+        display: none;
+    }
+    #carrinho{
+        position: absolute;
+        left: -280px;
+        top: 100px;
+
+        height: 300px;
+    }
+
+    #table{
+        width: 100%;
+        flex-direction: column;
+    }
+/*------------------------imagens------------------------*/
+    #imagens{
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    #principalimg{
+        border-radius: 0;
+        max-width: 100%;
+        
+    }
+    .psetas{
+        display: flex;
+    }
+    #fotos{
+        display: none;
+    }
+/*------------------------infos------------------------*/
+    #infos{
+        flex-direction: column;
+        gap: 10px;
+        height: 500px;
+        justify-content: start;
+    }
+    h1{
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+
+    #addcart{
+        flex-direction: column;
+        margin: auto;
+        justify-content: end;
+    }
+    #quant{
+        width: 100%;
+        min-height: 50px;
+    }
+    #add{
+        width: 100%;
+        min-height: 50px;
+    }
+    .attribution{
+        display: none;
+    }
+}
